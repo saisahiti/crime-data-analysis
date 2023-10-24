@@ -1,6 +1,7 @@
 from sqlite3 import Error
 import re
 
+
 class CrudOperations:
     def __init__(self, conn):
         """Initialize the CrudOperations with an SQLite connection."""

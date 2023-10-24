@@ -86,11 +86,11 @@ class CreateTable:
     def create_location_dict(self):
 
         self._connect()
-        CrudOperations(self.conn)
+        crud_op = CrudOperations(self.conn)
 
         select_location_query = 'select Location, LocationID from location;'
 
-        location_values = self.conn.execute_sql_statement(select_location_query)
+        location_values = crud_op.execute_sql_statement(select_location_query)
 
         return dict(location_values)
 
@@ -127,11 +127,11 @@ class CreateTable:
     def create_race_dict(self):
 
         self._connect()
-        CrudOperations(self.conn)
+        crud_op = CrudOperations(self.conn)
 
         select_race_query = 'select Race, RaceID from race;'
 
-        race_values = self.conn.execute_sql_statement(select_race_query)
+        race_values = crud_op.execute_sql_statement(select_race_query)
 
         return dict(race_values)
 
@@ -173,11 +173,11 @@ class CreateTable:
     def create_criminal_dict(self):
 
         self._connect()
-        CrudOperations(self.conn)
+        crud_op = CrudOperations(self.conn)
 
         select_criminal_query = 'select Gender, CriminalID from criminal;'
 
-        criminal_values = self.conn.execute_sql_statement(select_criminal_query)
+        criminal_values = crud_op.execute_sql_statement(select_criminal_query)
 
         return dict(criminal_values)
 
